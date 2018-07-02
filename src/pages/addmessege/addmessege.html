@@ -1,0 +1,47 @@
+<!--
+  Generated template for the AddmessegePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a Messege</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <form (ngSubmit)="register(f.value)" #f="ngForm">
+
+      <ion-item>
+        <ion-label>Lane Number</ion-label>
+        <ion-select [(ngModel)]="lane_number" [ngModelOptions]="{standalone: true}" name="lane_number">
+          <ion-option value="100">100</ion-option>
+          <ion-option value="101">101</ion-option>
+          <ion-option value="102">102</ion-option>
+          <ion-option value="103">103</ion-option>
+          <ion-option value="104">104</ion-option>
+          <ion-option value="105">105</ion-option>
+          <ion-option value="106">106</ion-option>
+          <ion-option value="107">107</ion-option>
+          <ion-option value="108">108</ion-option>
+          <ion-option value="109">109</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>messege</ion-label>
+          <ion-input ngModel name="messege" type="text"></ion-input>
+        </ion-item>
+      
+
+      <div padding>
+        <button ion-button round full type="submit" round [disabled]="!f.valid">Register</button>
+      </div>
+    </form>
+  </ion-list>
+</ion-content>

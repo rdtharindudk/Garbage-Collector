@@ -1,0 +1,31 @@
+<!--
+  Generated template for the MyitemsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>myitems</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let i of items">
+        <ion-card-content>
+          <ion-card-title clear>
+            Item name : {{i.item_name}}
+          </ion-card-title>
+          <h2>Item Description : {{i.description}}</h2>
+          <h2>User name : {{i.username}}</h2>
+          <button ion-button (click)="update(i)" > Update</button>
+          <button ion-button (click)="delete(i)" >Delete</button>
+        </ion-card-content>
+
+      </ion-card> 
+
+</ion-content>

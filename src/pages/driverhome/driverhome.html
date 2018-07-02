@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        Logout
+      </button>
+    </ion-buttons>
+    <ion-title>Driver Portal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list no-lines>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item }}
+        </button> 
+      </ion-list>
+</ion-content>

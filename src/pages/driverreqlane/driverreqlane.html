@@ -1,0 +1,44 @@
+<!--
+  Generated template for the DriverreqlanePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lane wise Requests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h5>Lane 100 : {{requests[0]}} requests</h5>
+  <h5>Lane 101 : {{requests[1]}} requests</h5>
+  <h5>Lane 102 : {{requests[2]}} requests</h5>
+  <h5>Lane 103 : {{requests[3]}} requests</h5>
+  <h5>Lane 104 : {{requests[4]}} requests</h5>
+  <h5>Lane 105 : {{requests[5]}} requests</h5>
+  <h5>Lane 106 : {{requests[6]}} requests</h5>
+  <h5>Lane 107 : {{requests[7]}} requests</h5>
+  <h5>Lane 108 : {{requests[8]}} requests</h5>
+  <h5>Lane 109 : {{requests[9]}} requests</h5>
+  <ion-item>
+    <ion-label>Lane Number</ion-label>
+    <ion-select [(ngModel)]="lane_number" [ngModelOptions]="{standalone: true}" name="lane_number">
+      <ion-option value="100">100</ion-option>
+      <ion-option value="101">101</ion-option>
+      <ion-option value="102">102</ion-option>
+      <ion-option value="103">103</ion-option>
+      <ion-option value="104">104</ion-option>
+      <ion-option value="105">105</ion-option>
+      <ion-option value="106">106</ion-option>
+      <ion-option value="107">107</ion-option>
+      <ion-option value="108">108</ion-option>
+      <ion-option value="109">109</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button round full (click)="showConfirm()">Completed</button>
+
+</ion-content>

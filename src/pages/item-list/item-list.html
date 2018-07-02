@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ItemListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Item List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let i of items" >
+    <ion-item>
+      <h2>{{i.item_name}}</h2>
+      <p>{{i.username}}</p>
+    </ion-item>
+
+    <ion-img src="../assets/imgs/logo.png"></ion-img>
+
+    <ion-card-content>
+      <p>{{i.description}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <button ion-button icon-left clear small (click)="comments(i.id)">
+        <ion-icon name="text"></ion-icon>
+        <div>Comments</div>
+      </button>
+    </ion-row>
+  </ion-card>
+</ion-content>
